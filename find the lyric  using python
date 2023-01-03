@@ -11,7 +11,7 @@ while True:
   else:
     print("Nope! Try again!")
     counter +=1
-  if lyrics == "miss":
+  if lyrics == "miss" or lyrics == "Year":
     break
 print("Thanks for playing!")
 
