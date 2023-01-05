@@ -1,0 +1,16 @@
+myDiary =[]
+
+def printList():
+  for item in myDiary:
+    print(item)
+    print()
+while True:
+  menu = input("Add or Remove?:\n")
+  if menu =="add":
+    item = input("What's next on thr Diary?: ")
+    myDiary.append(item)
+  elif menu =="remove":
+    item  = input("What u want to remove?:")
+    myDiary.remove(item)
+  printList() 
+    
