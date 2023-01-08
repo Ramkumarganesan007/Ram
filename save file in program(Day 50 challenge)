@@ -1,0 +1,27 @@
+import os,time ,random
+
+def add():
+  os.system("clear")
+  idea = input(" Idea > ")
+  f = open("ideaFlie.txt", "a+")
+
+  f.write(f"{idea}\n")
+  f.close()
+  time.sleep(1)
+  os.system("clear")
+def show():
+  os.system("clear")
+  f = open("ideaFlie.txt", "r")
+  idea = f.read().split("\n")
+  f.close()
+  idea.remove("")
+  idea = random.choice(idea)
+  print(idea)
+  time.sleep(1)
+  os.system("clear") 
+while True:
+    menu = input("1: Add idea\n2: Show a random idea\n> ")
+    if menu == "1":
+      add()
+    else:
+      show()
